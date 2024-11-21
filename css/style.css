@@ -1,0 +1,51 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+  image-rendering: pixelated;
+}
+
+body {
+  font-family: "Press Start 2P", "DungGeunMo", "맑은고딕", Arial, Helvetica;
+  font-size: 16px;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* 표준 문법 */
+  color: #fff;
+  background: #000;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: url("../images/cursor_pointer.webp"), auto;
+}
+
+.wrap {
+  width: 1280px;
+  height: 100vh;
+  position: relative;
+  margin: auto;
+  background-size: cover !important;
+  overflow: hidden;
+  cursor: url("../images/cursor.webp"), auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 48px;
+  text-shadow: 3px 3px #000;
+}/*# sourceMappingURL=style.css.map */

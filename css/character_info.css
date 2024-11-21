@@ -1,0 +1,340 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+  image-rendering: pixelated;
+}
+
+body {
+  font-family: "Press Start 2P", "DungGeunMo", "맑은고딕", Arial, Helvetica;
+  font-size: 16px;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* 표준 문법 */
+  color: #fff;
+  background: #000;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: url("../images/cursor_pointer.webp"), auto;
+}
+
+.wrap {
+  width: 1280px;
+  height: 100vh;
+  position: relative;
+  margin: auto;
+  background-size: cover !important;
+  overflow: hidden;
+  cursor: url("../images/cursor.webp"), auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 48px;
+  text-shadow: 3px 3px #000;
+}
+
+.wrap {
+  background: url("../images/bg_character_on.webp") no-repeat;
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  opacity: 0;
+  animation: show 1s forwards;
+  transition: background 0.3s;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+    filter: brightness(1.2);
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 42px 10px auto;
+}
+.btn a {
+  display: block;
+  width: 150px;
+  height: 60px;
+  background: url(../images/back_btn.webp) no-repeat;
+  background-size: 100%;
+  text-align: center;
+  line-height: 3.3;
+  opacity: 0;
+}
+.btn a:hover {
+  background: url("../images/back_btn_hover.webp") no-repeat;
+  background-size: 100%;
+}
+.btn .show2 {
+  animation: show2 0.5s forwards;
+}
+
+@keyframes show2 {
+  100% {
+    opacity: 100%;
+  }
+}
+.info_box {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.show2 {
+  animation: show2 0.5s forwards;
+}
+
+.info1,
+.info2 {
+  position: relative;
+  height: 664px;
+}
+
+.info1 {
+  background: url(../images/info1.webp) no-repeat;
+  width: 480px;
+}
+
+.info2 {
+  background: url(../images/info2.webp);
+  width: 742px;
+}
+.info2 #somter, .info2 #heejun {
+  text-decoration: underline;
+  color: #3eb8d0;
+}
+
+.cont1,
+.cont2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+}
+
+.cont1 {
+  width: 360px;
+}
+.cont1 span {
+  background: #fff;
+  color: #000;
+  width: 60px;
+  text-align: center;
+  padding: 12px 8px 10px 10px;
+}
+
+.title {
+  display: flex;
+}
+.title img {
+  width: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.title p {
+  width: calc(100% - 80px);
+  font-size: 18px;
+}
+.title p span {
+  all: unset;
+  display: block;
+}
+.title p span:first-of-type {
+  font-size: 16px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+  background: #e3491b;
+  padding: 12px 0 10px 14px;
+}
+.title p span:last-of-type {
+  font-size: 22px;
+  padding: 8px 14px;
+  letter-spacing: 10px;
+}
+
+.somter {
+  background: #e21a92 !important;
+}
+
+.photo {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 300px;
+  margin: 16px auto;
+}
+
+.hp,
+.mp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mp {
+  margin: 4px 0 5px;
+}
+
+.heart,
+.magic {
+  display: flex;
+}
+.heart img,
+.magic img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.heart {
+  height: 40px;
+}
+.heart img {
+  margin: 0 5px;
+}
+
+.magic {
+  height: 48px;
+}
+.magic img {
+  margin: 0 0.8px;
+}
+
+.atk {
+  display: flex;
+  justify-content: space-between;
+}
+.atk p {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 48%;
+}
+.atk p span {
+  display: inline-block;
+}
+
+.cont2 {
+  width: 630px;
+  height: 550px;
+  padding-right: 25px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.cont2 h3 {
+  padding: 12px 0 10px 14px;
+  background: #e3491b;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+  width: 35%;
+  letter-spacing: 3px;
+}
+.cont2 p {
+  font-family: "DungGeunMo";
+  line-height: 1.5;
+  margin: 20px 0;
+}
+.cont2 .item {
+  margin: 20px 0;
+}
+.cont2 .item p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+.cont2 .item p img {
+  width: 64px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cont2 .item p span {
+  display: block;
+  margin-left: auto;
+  font-size: 20px;
+}
+.cont2 .item p .dot {
+  margin-bottom: 6px;
+}
+.cont2 .skill {
+  font-family: "DungGeunMo";
+  font-size: 20px;
+  margin-top: 20px;
+}
+.cont2 .skill li {
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 10px 0;
+  letter-spacing: 1px;
+}
+.cont2 .skill li:nth-child(2n) {
+  background: rgba(227, 73, 27, 0.2);
+  padding: 10px;
+  font-size: 16px;
+}
+.cont2 .skill li img {
+  width: 64px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cont2 .skill li div {
+  position: absolute;
+  left: 45%;
+}
+.cont2 .skill li div .star {
+  width: 32px;
+}
+.cont2 .skill li span {
+  margin-left: auto;
+}
+.cont2 .skill .somter_skill {
+  background: rgba(226, 26, 146, 0.2) !important;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 10px;
+}
+.scroll::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.scroll::-webkit-scrollbar-track {
+  background: rgba(204, 204, 204, 0.2);
+}
+.scroll::-webkit-scrollbar-corner {
+  background: transparent;
+}/*# sourceMappingURL=character_info.css.map */

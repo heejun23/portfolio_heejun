@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEEJUN - PORTFOLIO : 캐릭터도감</title>
+  <link rel="shortcut icon" href="./images/favicon_pixel2.webp" type="image/x-icon">
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/character.css">
+</head>
+
+<body>
+  <section class="wrap">
+    <img src="./images/transition.gif" alt="트랜지션" class="transition">
+
+    <article class="grid">
+      <h2>캐릭터도감</h2>
+      <a href="main_mnu.html" title="메인메뉴" class="back_btn">돌아간다</a>
+      <a href="heejun.html" title="원희준" class="heejun">
+        <img src="./images/me16.webp" alt="원희준">
+      </a>
+      <img src="./images/unknown.webp" alt="정보없음" class="unknown">
+      <img src="./images/unknown.webp" alt="정보없음" class="unknown">
+      <img src="./images/unknown.webp" alt="정보없음" class="unknown">
+      <img src="./images/unknown.webp" alt="정보없음" class="unknown">
+      <img src="./images/unknown.webp" alt="정보없음" class="unknown">
+      <img src="./images/unknown.webp" alt="정보없음" class="unknown">
+      <img src="./images/unknown.webp" alt="정보없음" class="unknown">
+      <img src="./images/unknown.webp" alt="정보없음" class="unknown">
+      <img src="./images/unknown.webp" alt="정보없음" class="unknown">
+      <a href="somter.html" title="솜털이" class="somter">
+        <img src="./images/somter.webp" alt="솜털이">
+      </a>
+      <img src="./images/unknown.webp" alt="정보없음" class="unknown">
+    </article>
+
+  </section>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+$(document).ready(function(){
+    // 픽셀전환효과
+    let gif = $('.transition')
+  gif.attr('src', gif.attr('src') + '?' + new Date().getTime())
+
+  setTimeout(function () {
+    $('.transition').addClass('end')
+  }, 1000);
+})
+  </script>
+</body>
+
+</html>

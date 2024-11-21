@@ -1,0 +1,206 @@
+@import "style";
+
+.wrap {
+  background: url("../images/bg_archive.webp") no-repeat;
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    .btn {
+      width: fit-content;
+      margin: 0 42px 10px auto;
+      a {
+        display: block;
+        width: 150px;
+        height: 60px;
+        background: url(../images/back_btn.webp) no-repeat;
+        background-size: 100%;
+        text-align: center;
+        line-height: 3.3;
+        &:hover {
+          background: url("../images/back_btn_hover.webp") no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+  }
+}
+
+.info_box {
+  margin: auto;
+  background: url(../images/info3.webp) no-repeat;
+  width: 1217px;
+  height: 757px;
+  padding: 60px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: $pixelKo;
+  position: relative;
+  .title {
+    display: flex;
+    align-items: center;
+    img {
+      object-fit: cover;
+      width: 64px;
+      height: 64px;
+    }
+    p {
+      font-size: $font_size_36;
+      text-shadow: 2px 2px rgba($dark_color1, 0.8);
+      padding: 14px 28px 14px 24px;
+    }
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    .sample {
+      height: 637px;
+      img {
+        object-fit: cover;
+        height: 100%;
+        image-rendering: -webkit-optimize-contrast;
+      }
+    }
+  }
+}
+.info {
+  position: relative;
+  width: calc(100% - 340px);
+  .story{
+    h3 {
+      font-family: $pixelEn;
+      font-size: $font_size_14;
+      width: 200px;
+      padding: 12px 0 10px 14px;
+      text-shadow: 2px 2px rgba($dark_color1, 0.8);
+    }
+    p {
+      line-height: 1.5;
+      margin: 15px 0;
+    }
+    .skill {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 15px 0;
+      gap: 9px;
+      img {
+        width: 48px;
+        object-fit: cover;
+        image-rendering: -webkit-optimize-contrast;
+      }
+    }
+    .list_wrapper {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 180px;
+      margin-left: 6px;
+      overflow: hidden;
+    }
+    .sample_list {
+      position: absolute;
+      width: max-content;
+      left: 0;
+      display: flex;
+      align-items: center;
+      transition: 0.3s;
+      li {
+        width: calc(727px / 5);
+        height: 180px;
+        box-sizing: border-box;
+        overflow: hidden;
+        cursor: url(../images/cursor_pointer.webp), pointer;
+        filter: brightness(0.5);
+        &:hover {
+          filter: brightness(1);
+        }
+        img {
+          display: block;
+          object-fit: cover;
+          height: 100%;
+          margin: auto;
+          image-rendering: -webkit-optimize-contrast;
+        }
+      }
+    }
+    button {
+      background: url(../images/select1.webp) center;
+      background-size: 45px;
+      border: none;
+      padding: 0;
+      cursor: url(../images/cursor_pointer.webp), auto;
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      bottom: 72px;
+      z-index: 10;
+      &:disabled {
+        cursor: url(../images/cursor.webp), auto;
+        opacity: 0.5;
+      }
+    }
+    .right_btn {
+      right: 0;
+    }
+    .left_btn {
+      left: -20px;
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.web_info {
+  font-size: $font_size_20;
+  margin-top: 16px;
+}
+.btn_box {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  a {
+    font-family: $pixelEn;
+    font-size: $font_size_12;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    color: $dark_color3;
+    &:hover {
+      img {
+        filter: brightness(1) grayscale(0);
+      }
+    }
+    &:last-of-type {
+      font-family: $pixelKo;
+      font-size: $font_size_16;
+    }
+    img {
+      object-fit: contain;
+      width: 16px;
+      filter: brightness(3) grayscale(2);
+    }
+  }
+}
+//매일축제
+.festival_title {
+  background: $festival_red;
+}
+.festival_page {
+  a {
+    background: url(../images/go_btn_festival.webp) center no-repeat;
+    background-size: cover;
+    &:hover {
+      background: url(../images/go_btn_hover_festival.webp) center no-repeat;
+      background-size: cover;
+      color: $festival_red;
+    }
+  }
+}

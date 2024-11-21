@@ -1,0 +1,134 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+  image-rendering: pixelated;
+}
+
+body {
+  font-family: "Press Start 2P", "DungGeunMo", "맑은고딕", Arial, Helvetica;
+  font-size: 16px;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* 표준 문법 */
+  color: #fff;
+  background: #000;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: url("../images/cursor_pointer.webp"), auto;
+}
+
+.wrap {
+  width: 1280px;
+  height: 100vh;
+  position: relative;
+  margin: auto;
+  background-size: cover !important;
+  overflow: hidden;
+  cursor: url("../images/cursor.webp"), auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 48px;
+  text-shadow: 3px 3px #000;
+}
+
+body {
+  overflow: hidden;
+}
+
+.wrap {
+  background: url("../images/bg_space.webp") no-repeat;
+}
+.wrap h2 {
+  font-family: "DungGeunMo";
+  line-height: 1.5;
+  padding: 110px 0 90px;
+  text-shadow: 3px 3px #000;
+  animation: updown 0.5s step-end infinite;
+}
+.wrap ul {
+  margin: auto;
+  padding-top: 20px;
+  text-align: center;
+}
+.wrap ul li {
+  margin-bottom: 30px;
+}
+.wrap ul a {
+  display: block;
+  width: 400px;
+  height: 100px;
+  margin: auto;
+  font-size: 36px;
+  background: url(../images/mnu.webp) center no-repeat;
+  background-size: 400px;
+  position: relative;
+}
+.wrap ul a:hover {
+  background: url(../images/mnu_hover.webp) center no-repeat;
+  background-size: 400px;
+  color: #e21a92;
+}
+.wrap ul a:hover img {
+  filter: brightness(1);
+}
+.wrap ul a:before {
+  content: "";
+  position: absolute;
+  left: -70px;
+  top: 22px;
+  width: 64px;
+  height: 64px;
+  background: url("../images/select1.webp");
+  background-size: cover;
+  display: none;
+}
+.wrap ul a:hover::before {
+  display: block;
+}
+
+@keyframes updown {
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+li a img {
+  filter: brightness(10);
+  transform: translateY(18px);
+}
+
+.transition {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 10;
+}
+
+.end {
+  z-index: 0 !important;
+}/*# sourceMappingURL=start_mnu.css.map */

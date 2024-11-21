@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+// DungGeunMo
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// .press-start-2p
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// 색상
+$main_color: #e21a92;
+$point_blue1: #3eb8d0;
+$point_blue2: #0043FF;
+$point_blue3: #2d00b7;
+$point_orange: #e3491b;
+$point_orange2: #ff8115;
+$festival_red: #ff4242;
+$samsung_blue: #0084ff;
+$groovelab_green: #adff00;
+$dark_color1: #000;
+$dark_color2: #ccc;
+$dark_color3: #fff;
+
+// 폰트관련
+$pixelEn: "Press Start 2P";
+$pixelKo: "DungGeunMo";
+$font_size_12: 12px;
+$font_size_14: 14px;
+$font_size_16: 16px;
+$font_size_18: 18px;
+$font_size_20: 20px;
+$font_size_22: 22px;
+$font_size_24: 24px;
+$font_size_36: 36px;
+$font_size_48: 48px;
+
+html{
+  scroll-behavior: smooth;
+  image-rendering: pixelated;
+}
+body {
+  font-family: "Press Start 2P","DungGeunMo",'맑은고딕',Arial, Helvetica;
+  font-size: $font_size_16;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* 표준 문법 */
+  color: $dark_color3;
+  background: $dark_color1;
+  width: 100%;
+}
+
+a {
+  color: $dark_color3;
+  text-decoration: none;
+  cursor: url('../images/cursor_pointer.webp'), auto;
+}
+
+.wrap{
+  width: 1280px;
+  height: 100vh;
+  position: relative;
+  margin: auto;
+  background-size: cover !important;
+  overflow: hidden;
+  cursor: url('../images/cursor.webp'), auto;
+}
+
+h2{
+  text-align: center;
+  font-size: $font_size_48;
+  text-shadow: 3px 3px $dark_color1;
+}
+
+
+

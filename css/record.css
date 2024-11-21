@@ -1,0 +1,271 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+  image-rendering: pixelated;
+}
+
+body {
+  font-family: "Press Start 2P", "DungGeunMo", "맑은고딕", Arial, Helvetica;
+  font-size: 16px;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* 표준 문법 */
+  color: #fff;
+  background: #000;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: url("../images/cursor_pointer.webp"), auto;
+}
+
+.wrap {
+  width: 1280px;
+  height: 100vh;
+  position: relative;
+  margin: auto;
+  background-size: cover !important;
+  overflow: hidden;
+  cursor: url("../images/cursor.webp"), auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 48px;
+  text-shadow: 3px 3px #000;
+}
+
+.wrap {
+  background: url("../images/bg_archive.webp") no-repeat;
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+}
+.wrap article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.wrap article .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 42px 10px auto;
+}
+.wrap article .btn a {
+  display: block;
+  width: 150px;
+  height: 60px;
+  background: url(../images/back_btn.webp) no-repeat;
+  background-size: 100%;
+  text-align: center;
+  line-height: 3.3;
+}
+.wrap article .btn a:hover {
+  background: url("../images/back_btn_hover.webp") no-repeat;
+  background-size: 100%;
+}
+.wrap article .info_box {
+  margin: auto;
+  background: url(../images/info3.webp) no-repeat;
+  width: 1217px;
+  height: 757px;
+  padding: 60px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: "DungGeunMo";
+  position: relative;
+}
+.wrap article .info_box .title {
+  display: flex;
+  align-items: center;
+}
+.wrap article .info_box .title img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 64px;
+  height: 64px;
+}
+.wrap article .info_box .title p {
+  font-size: 36px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+  padding: 14px 28px 14px 24px;
+}
+.wrap article .web_info {
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+.btn_box {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+.btn_box a {
+  font-family: "Press Start 2P";
+  font-size: 12px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  color: #fff;
+}
+.btn_box a:hover img {
+  filter: brightness(1) grayscale(0);
+}
+.btn_box a:last-of-type {
+  font-family: "DungGeunMo";
+  font-size: 16px;
+}
+.btn_box a img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 16px;
+  filter: brightness(3) grayscale(2);
+}
+
+.story {
+  display: flex;
+  justify-content: space-between;
+}
+.story .right {
+  width: 36%;
+}
+.story .right h3 {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  width: 200px;
+  padding: 12px 0 10px 14px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+}
+.story .right p {
+  line-height: 1.5;
+  margin: 15px 0;
+}
+.story .right ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px 0;
+  gap: 9px;
+}
+.story .right ul img {
+  width: 48px;
+}
+.story .sample {
+  width: 63%;
+}
+.story .sample img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.list_wrapper {
+  position: absolute;
+  bottom: 60px;
+  width: 1097px;
+  height: 115px;
+  overflow: hidden;
+}
+.list_wrapper .sample_list {
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  gap: 10px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+.list_wrapper .sample_list li {
+  width: 264.25px;
+  height: 130px;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: url(../images/cursor_pointer.webp), pointer;
+  filter: brightness(0.5);
+}
+.list_wrapper .sample_list li:hover {
+  filter: brightness(1);
+}
+.list_wrapper .sample_list li img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+button {
+  background: url(../images/select1.webp) center;
+  background-size: 45px;
+  border: none;
+  padding: 0;
+  cursor: url(../images/cursor_pointer.webp), auto;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  bottom: 100px;
+}
+button:disabled {
+  cursor: url(../images/cursor.webp), auto;
+  opacity: 0.5;
+}
+
+.right_btn {
+  right: 36px;
+}
+
+.left_btn {
+  left: 36px;
+  transform: rotate(-180deg);
+}
+
+.bonguse_title {
+  background: #ff8115;
+}
+
+.bonguse_page a {
+  background: url(../images/go_btn_bonguse.webp) center no-repeat;
+  background-size: cover;
+}
+.bonguse_page a:hover {
+  background: url(../images/go_btn_hover_bonguse.webp) center no-repeat;
+  background-size: cover;
+  color: #ff8115;
+}
+
+.samsung_title {
+  background: #0043FF;
+}
+
+.samsung_page a {
+  background: url(../images/go_btn_samsung.webp) center no-repeat;
+  background-size: cover;
+}
+.samsung_page a:hover {
+  background: url(../images/go_btn_hover_samsung.webp) center no-repeat;
+  background-size: cover;
+  color: #0084ff;
+}/*# sourceMappingURL=record.css.map */

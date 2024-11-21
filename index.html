@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WELCOME!</title>
+  <link rel="shortcut icon" href="./images/favicon_pixel2.webp" type="image/x-icon">
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <!-- 1280모니터 -->
+  <div class="wrap">
+    <img src="./images/window98.webp" alt="윈도우98아이콘" class="bg">
+    <!-- 바탕화면 아이콘 -->
+    <div class="icon_box">
+      <ul class="icon">
+        <li><img src="./images/icon_computer.webp" alt="내 컴퓨터">내 컴퓨터</li>
+        <li class="myfolder"><img src="./images/icon_folder.webp" alt="내 폴더">내 폴더</li>
+        <li><img src="./images/icon_bin.webp" alt="휴지통">휴지통</li>
+        <li><img src="./images/icon_zip.webp" alt="반디집">반디집</li>
+        <li><img src="./images/icon_internet.webp" alt="인터넷 익스플로러">Internet Explorer</li>
+        <li><img src="./images/icon_chrome.webp" alt="크롬">Chrome</li>
+        <li><img src="./images/icon_opera.webp" alt="오페라">Opera</li>
+        <li><img src="./images/icon_notepad.webp" alt="메모장">메모장</li>
+        <li><img src="./images/icon_paint.webp" alt="그림판">그림판</li>
+        <li><img src="./images/icon_youtube.webp" alt="유튜브">YouTube</li>
+        <li><img src="./images/icon_kakao.webp" alt="카카오톡">카카오톡</li>
+        <li><img src="./images/icon_discord.webp" alt="디스코드">Discord</li>
+        <li><img src="./images/icon_steam.webp" alt="STEAM">STEAM</li>
+        <li><img src="./images/icon_vscode.webp" alt="vscode">Visual Studio Code</li>
+        <li><img src="./images/icon_xampp.webp" alt="xampp">xampp-control</li>
+        <li><img src="./images/icon_filezila_window.webp" alt="파일질라">FileZila<br>Client</li>
+        <li class="mygame"><img src="./images/favicon_pixel2.webp" alt="포트폴리오 아이콘" />
+          HEEJUN
+          <p class="click_me">더블클릭<br>해보세요!</p>
+        </li>
+      </ul>
+      <ul class="design">
+        <li><img src="./images/icon_figma_window.webp" alt="피그마">Figma</li>
+        <li><img src="./images/icon_ps_window.webp" alt="포토샵">Adobe<br>PhotoShop</li>
+        <li><img src="./images/icon_illust_window.webp" alt="일러스트">Adobe Illustrator</li>
+        <li><img src="./images/icon_premiere_window.webp" alt="프리미어프로">Adobe<br>Premiere Pro</li>
+      </ul>
+    </div>
+    <!-- 내폴더 -->
+    <div class="myfolder_folder">
+      <div class="btn_bar">
+        <p>내 폴더</p>
+        <div class="btn_box">
+          <button class="folder_screen_down"><span></span></button>
+          <button><span></span></button>
+          <button class="folder_close">✕</button>
+        </div>
+      </div>
+      <div class="setting">
+        <span>파일</span>
+        <span>편집</span>
+        <span>보기</span>
+        <span>이용</span>
+        <span>즐겨찾기</span>
+        <span>도움말</span>
+      </div>
+      <div>
+        
+      </div>
+      <div class="folder_screen">
+
+      </div>
+    </div>
+    <!-- 모달게임창 -->
+    <div class="modal">
+      <div class="game">
+        <div class="btn_bar">
+          <p>HEEJUN</p>
+          <div class="btn_box">
+            <div class="screen_down"></div>
+            <div class="close">✕</div>
+          </div>
+        </div>
+        <div class="screen">
+          <p class="score">SCORE<br>000000</p>
+          <p class="stage">STAGE 1-1<br>TIME 00:00</p>
+          <div class="center">
+            <img src="./images/logo_pixel.webp" alt="픽셀로고">
+
+            <p class="start_txt">PRESS ANY KEY TO START</p>
+
+            <audio id="start_bgm" src="./audio/game_start.mp3"></audio>
+            <audio id="bgm" src="./audio/intro.mp3" loop></audio>
+            <audio id="li_bgm" src="./audio/list.mp3"></audio>
+            <audio id="confirm" src="./audio/confirm.mp3"></audio>
+
+            <ul>
+              <li>START</li>
+              <li>CONTINUE</li>
+              <li class="exit_btn">EXIT</li>
+            </ul>
+
+          </div>
+          <footer>
+            <address>&copy; 2024 WON HEE JUN PORTFOLIO ALL RIGHTS RESERVED.</address>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- 윈도우바 -->
+    <div class="window">
+      <div class="start"><img src="./images/window_start.webp" alt="윈도우바 시작아이콘">
+        <span>시작</span>
+      </div>
+
+      <p class="time"></p>
+    </div>
+
+  </div>
+
+  <script src="./script/index.js"></script>
+</body>
+
+</html>

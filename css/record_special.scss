@@ -1,0 +1,307 @@
+@import "style";
+.wrap {
+  background: url("../images/bg_archive.webp") no-repeat;
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    .btn {
+      width: fit-content;
+      margin: 0 42px 10px auto;
+      a {
+        display: block;
+        width: 150px;
+        height: 60px;
+        background: url(../images/back_btn.webp) no-repeat;
+        background-size: 100%;
+        text-align: center;
+        line-height: 3.3;
+        &:hover {
+          background: url("../images/back_btn_hover.webp") no-repeat;
+          background-size: 100%;
+          background-position-y: calc(50% - 2.5px);
+        }
+      }
+    }
+    .info_box {
+      margin: auto;
+      background: url(../images/info3.webp) no-repeat;
+      width: 1217px;
+      height: 757px;
+      padding: 60px;
+      box-sizing: border-box;
+      overflow: hidden;
+      font-family: $pixelKo;
+      position: relative;
+      .title {
+        display: flex;
+        align-items: center;
+        img {
+          object-fit: cover;
+          width: 64px;
+          height: 64px;
+        }
+        p {
+          font-size: $font_size_36;
+          padding: 14px 28px 14px 24px;
+        }
+      }
+    }
+    .web_info {
+      font-size: $font_size_20;
+      margin-top: 16px;
+    }
+  }
+}
+// 공통제목 서식
+.groovelab_title{
+  background: $groovelab_green;
+  color: $dark_color1;
+  text-shadow: 2px 2px $dark_color3;
+}
+
+// 탭콘텐츠
+#change_btn{
+  background: url('../images/change_btn.webp')center no-repeat;
+  background-size: 100%;
+  width: 136px; height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
+  cursor: url(../images/cursor_pointer.webp), auto;
+  img{
+    object-fit: cover;
+    width: 30px; height: 30px;
+    margin-left: 6px;
+  }
+}
+.tab{
+  display: none;
+}
+.active{
+display: block;
+}
+.btn_box {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  a {
+    font-family: $pixelEn;
+    font-size: $font_size_12;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    color: $dark_color3;
+    background: url(../images/go_btn_groovelab.webp) center no-repeat;
+    background-size: cover;
+    &:hover{
+      background: url(../images/go_btn_hover_groovelab.webp)center no-repeat;
+      background-size: cover;
+      color: $groovelab_green;
+      img{
+        filter: brightness(1) grayscale(0);
+      }
+    }
+    &:last-of-type {
+      font-family: $pixelKo;
+      font-size: $font_size_16;
+    }
+    img {
+      object-fit: contain;
+      width: 16px;
+      filter: brightness(3) grayscale(2);
+    }
+  }
+}
+// 공통
+.story{
+  h3 {
+    font-family: $pixelEn;
+    font-size: $font_size_14;
+    width: 200px;
+    padding: 12px 0 10px 14px;
+  }
+  .skill {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 0;
+    gap: 4px;
+  }
+  p {
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+  .sample{
+    img {
+      object-fit: cover;
+      width: 100%;
+      image-rendering: -webkit-optimize-contrast;
+    }
+  }
+}
+// 관리자
+#con_admin{
+  .story {
+    display: flex;
+    justify-content: space-between;
+    .right {
+      width: 36%;
+    }
+    .sample {
+      width: 63%;
+    }
+    .skill{
+      img {
+        width: 40px;
+      }
+    }
+  }
+  .list_wrapper{
+    position: absolute;
+    bottom: 60px;
+    width: 1097px; height: 115px;
+    overflow: hidden;
+    .sample_list {
+      position: absolute;
+      width: max-content;
+      gap: 10px;
+      left: 0;
+      display: flex;
+      align-items: center;
+      transition: 0.3s; 
+      li {
+        width: calc(1097px / 4 - 10px); height: 130px;
+        box-sizing: border-box;
+        overflow: hidden;
+        cursor: url(../images/cursor_pointer.webp), pointer;
+        filter: brightness(0.5);
+        &:hover {
+          filter: brightness(1);
+        }
+        img {
+          display: block;
+          object-fit: cover;
+          width: 100%; height: 100%;
+          image-rendering: -webkit-optimize-contrast;
+        }
+      }
+    }
+  }
+  button{
+    background: url(../images/select1.webp) center;
+    background-size: 45px;
+    border: none;
+    padding: 0;
+    cursor: url(../images/cursor_pointer.webp), auto;
+    position: absolute;
+    width: 45px; height: 45px;
+    bottom: 94px;
+    &:disabled{
+      cursor: url(../images/cursor.webp), auto;
+  opacity: .5;
+    }
+  }
+  .right_btn{
+  right: 36px;
+  }
+  .left_btn{
+    left: 36px;
+    transform: rotate(-180deg);
+  }
+}
+
+// 모바일
+#con_user{
+  position: relative;
+  .sample {
+    position: absolute;
+    right: 0; top: -116px;
+    height: 637px;
+    img {
+      object-fit: cover;
+      height: 100%;
+      image-rendering: -webkit-optimize-contrast;
+    }
+  }
+  .story{
+    width: calc(100% - 340px); height: 466px;
+    position: relative;
+    p{
+      margin: 15px 0;
+    }
+    .skill{
+      gap: 10px;
+      img{
+        width: 48px;
+      }
+    }
+  }
+  .list_wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 210px;
+    margin-left: 6px;
+    overflow: hidden;
+  }
+  .sample_list {
+    position: absolute;
+    width: max-content;
+    left: 0;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    li {
+      width: calc(757px / 5);
+      height: 210px;
+      box-sizing: border-box;
+      overflow: hidden;
+      cursor: url(../images/cursor_pointer.webp), pointer;
+      filter: brightness(0.5);
+      &:hover {
+        filter: brightness(1);
+      }
+      img {
+        display: block;
+        object-fit: cover;
+        height: 100%;
+        margin: auto;
+        image-rendering: -webkit-optimize-contrast;
+      }
+    }
+  }
+  button {
+    background: url(../images/select1.webp) center;
+    background-size: 45px;
+    border: none;
+    padding: 0;
+    cursor: url(../images/cursor_pointer.webp), auto;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    bottom: 78px;
+    z-index: 10;
+    &:disabled {
+      cursor: url(../images/cursor.webp), auto;
+      opacity: 0.5;
+    }
+  }
+  .right_btn {
+    right: -32px;
+  }
+  .left_btn {
+    left: -20px;
+    transform: rotate(-180deg);
+  }
+}
+

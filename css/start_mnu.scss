@@ -1,0 +1,73 @@
+@import "style.scss";
+
+body{
+  overflow: hidden;
+}
+
+.wrap {
+  background: url('../images/bg_space.webp')no-repeat;
+  h2{
+    font-family: $pixelKo;
+    line-height: 1.5;
+    padding: 110px 0 90px;
+    text-shadow: 3px 3px $dark_color1;
+    animation: updown 0.5s step-end infinite;
+  }
+  ul{
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
+    li{
+      margin-bottom: 30px;
+    }
+    a{
+      display: block;
+      width: 400px; height: 100px;
+      margin: auto;
+      font-size: 36px;
+      background: url(../images/mnu.webp)center no-repeat ;
+      background-size: 400px;
+      position: relative;
+      &:hover{
+        background: url(../images/mnu_hover.webp)center no-repeat;
+        background-size: 400px;
+        color: $main_color;
+        img{
+          filter: brightness(1);
+        }
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        left: -70px; top: 22px;
+        width: 64px; height: 64px;
+        background: url('../images/select1.webp');
+        background-size: cover;
+        display: none;
+      }
+      &:hover::before{
+        display: block;
+      }
+    }
+  }
+}
+@keyframes updown {
+  50%{transform: translateY(-5px);}
+  100%{transform: translateY(0px);}
+}
+
+li a img{
+filter: brightness(10);
+transform: translateY(18px);
+}
+
+.transition{
+position: fixed;
+width: 100%;height: 100%;
+top: 0;left: 0;
+object-fit: cover;
+z-index: 10;
+}
+.end{
+  z-index: 0 !important;
+}

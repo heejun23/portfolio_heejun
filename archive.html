@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEEJUN - PORTFOLIO : 기록보관소</title>
+  <link rel="shortcut icon" href="./images/favicon_pixel2.webp" type="image/x-icon">
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/archive.css">
+</head>
+
+<body>
+  <section class="wrap">
+    <img src="./images/transition.gif" alt="트랜지션" class="transition">
+    <div class="grid">
+    <h2>기록보관소</h2>
+    <a href="main_mnu.html" title="메인메뉴" class="back_btn">돌아간다</a>
+  </div>
+    <!-- 리스트 -->
+    <div class="list_box">
+      <ul class="world_list">
+        <li>
+          <a href="record_bongouse.html" title="봉구스밥버거">
+            <img src="./images/world_bonguse.webp" alt="봉구스밥버거행성" class="bounce">
+            기록 01.<br>
+            <span>봉구스밥버거 리뉴얼</span>
+          </a>
+        </li>
+        <li>
+          <a href="record_samsung.html" title="삼성중공업">
+            <img src="./images/world_samsung.webp" alt="삼성중공업행성">
+            기록 02. <br>
+            <span>삼성중공업 리뉴얼</span>
+          </a>
+        </li>
+        <li>
+          <a href="record_festival.html" title="매일축제">
+            <img src="./images/world_festival.webp" alt="매일축제행성">
+            기록 03. <br>
+            <span>여행웹앱 매일축제</span>
+          </a>
+        </li>
+        <li>
+          <a href="record_groovelab.html" title="그루브랩">
+            <img src="./images/world_groovelab.webp" alt="그루브랩행성">
+            기록 04. <br>
+            <span>LMS 그루브랩</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <button class="left"><img src="./images/select1.webp" alt=""></button>
+    <button class="right"><img src="./images/select1.webp" alt=""></button>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // 픽셀전환효과
+      let gif = $('.transition')
+      gif.attr('src', gif.attr('src') + '?' + new Date().getTime())
+
+      setTimeout(function () {
+        $('.transition').addClass('end')
+      }, 1000);
+
+      // 슬라이드
+      let curIndex = localStorage.getItem('curIndex') ? parseInt(localStorage.getItem('curIndex')) : 0; // 초기 인덱스를 localStorage에서 가져옴
+      const list = $('.world_list')
+      const allslides = list.children().length
+      const slideWidth = 500
+      const wrapWidth = $('.wrap').width()
+      const offset = (wrapWidth - slideWidth) / 2 //슬라이드 초기위치
+
+
+      function moveSlide(index, animate = true) {
+        if (animate) {
+          list.css("transition", "transform 0.5s"); // 애니메이션 활성화
+        } else {
+          list.css("transition", "none"); // 애니메이션 비활성화
+        }
+        list.css("transform", `translateX(${-index * (slideWidth + 100) + offset}px)`);
+        list.children().find('img').removeClass('bounce')
+        list.children().eq(index).find('img').addClass('bounce')
+        localStorage.setItem('curIndex', index)
+      }
+
+      $('.right').click(function () {
+        if (curIndex < allslides - 1) {
+          curIndex++
+          moveSlide(curIndex)
+        }
+      })
+      $('.left').click(function () {
+        if (curIndex > 0) {
+          curIndex--
+          moveSlide(curIndex)
+        }
+      })
+      // 초기 로드 시 애니메이션 없이 슬라이드 위치 설정
+      $(document).ready(function () {
+        moveSlide(curIndex, false);
+        // 짧은 딜레이 후 애니메이션 다시 활성화
+        setTimeout(() => {
+          list.css("transition", "transform 0.5s"); // 애니메이션 다시 활성화
+        }, 50); // 50ms 후 애니메이션 활성화
+      });
+      moveSlide(curIndex)
+
+    })
+  </script>
+</body>
+
+</html>

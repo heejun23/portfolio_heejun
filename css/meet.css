@@ -1,0 +1,302 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+  image-rendering: pixelated;
+}
+
+body {
+  font-family: "Press Start 2P", "DungGeunMo", "맑은고딕", Arial, Helvetica;
+  font-size: 16px;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* 표준 문법 */
+  color: #fff;
+  background: #000;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: url("../images/cursor_pointer.webp"), auto;
+}
+
+.wrap {
+  width: 1280px;
+  height: 100vh;
+  position: relative;
+  margin: auto;
+  background-size: cover !important;
+  overflow: hidden;
+  cursor: url("../images/cursor.webp"), auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 48px;
+  text-shadow: 3px 3px #000;
+}
+
+.transition {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 100;
+}
+
+.wrap {
+  background: url(../images/bg_meet.webp);
+  font-family: "DungGeunMo";
+  background-size: 100%;
+}
+.wrap article {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg_meet_basic.webp) no-repeat;
+  background-size: cover;
+  z-index: 10;
+  transition: 2s;
+}
+.wrap article .dialogue_img {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -40%);
+  width: 325px;
+  height: 325px;
+  background-size: 100%;
+  opacity: 0;
+}
+.wrap article .dialogue {
+  background: url(../images/dialogue.webp) center no-repeat;
+  background-size: 100%;
+  width: 95%;
+  height: 300px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 30px 54px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: 2s;
+}
+.wrap article .dialogue #text {
+  font-size: 24px;
+}
+.wrap article .dialogue #text img {
+  transform: rotate(90deg) translateX(5px);
+  width: 30px;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.wrap article .typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end);
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.wrap .txtend {
+  opacity: 0;
+}
+
+.btn {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 10;
+}
+.btn a {
+  display: block;
+  width: 150px;
+  height: 54px;
+  background: url(../images/back_btn.webp) no-repeat;
+  background-size: 100%;
+  text-align: center;
+  line-height: 3.5;
+}
+.btn a:hover {
+  background: url("../images/back_btn_hover.webp") no-repeat;
+  background-size: 100%;
+}
+
+.shooting_star {
+  position: absolute;
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.star1 {
+  background: url("../images/shooting_star_pink.webp") no-repeat;
+  background-size: 100%;
+  animation: shooting_star 1s ease-out forwards;
+  top: 10%;
+  left: 30%;
+  animation-delay: 0s;
+}
+
+.star2 {
+  background: url("../images/shooting_star_blue.webp") no-repeat;
+  background-size: 100%;
+  animation: shooting_star 1s ease-out forwards;
+  top: 30%;
+  left: 50%;
+  animation-delay: 3s;
+}
+
+.star3 {
+  background: url("../images/shooting_star_yellow.webp") no-repeat;
+  background-size: 100%;
+  animation: shooting_star 1s ease-out forwards;
+  top: 60%;
+  left: 90%;
+  animation-delay: 5s;
+}
+
+.star4 {
+  background: url("../images/shooting_star_pink.webp") no-repeat;
+  background-size: 100%;
+  animation: shooting_star 1s ease-out forwards;
+  top: 40%;
+  left: 70%;
+  animation-delay: 1s;
+}
+
+.star5 {
+  background: url("../images/shooting_star_yellow.webp") no-repeat;
+  background-size: 100%;
+  animation: shooting_star 1s ease-out forwards;
+  top: 10%;
+  left: 40%;
+  animation-delay: 2.5s;
+}
+
+@keyframes shooting_star {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+    background-size: 100%;
+  }
+  100% {
+    transform: translate(-300px, 300px);
+    background-size: 0;
+  }
+}
+.front_bg {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+}
+
+.rocket {
+  position: absolute;
+  left: 50%;
+  bottom: -22%;
+  transform: translateX(-50%);
+  height: 200px;
+}
+
+.rocket_start {
+  animation: rocket 3s ease-in;
+}
+
+@keyframes rocket {
+  100% {
+    bottom: 120%;
+  }
+}
+.credit {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: -25%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+}
+.credit p {
+  font-size: 36px;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 3px 3px #000;
+}
+.credit p img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 42px;
+}
+.credit p:first-of-type {
+  gap: 14px;
+}
+.credit p:first-of-type img {
+  width: 38px;
+}
+.credit p:nth-of-type(2) {
+  gap: 14px;
+}
+.credit p:nth-of-type(4) {
+  gap: 10px;
+}
+.credit p:last-of-type {
+  margin-top: 20px;
+  line-height: 1.25;
+  font-size: 64px;
+  color: #e21a92;
+  font-family: "Press Start 2P";
+  text-shadow: 6px 4px #000, 8px 6px #fff;
+  word-spacing: -52px;
+}
+.credit .impression {
+  font-size: 24px;
+}
+
+.credit_start {
+  animation: credit 4.8s forwards;
+}
+
+@keyframes credit {
+  0% {
+    top: 165%;
+  }
+  100% {
+    top: 45%;
+  }
+}/*# sourceMappingURL=meet.css.map */
