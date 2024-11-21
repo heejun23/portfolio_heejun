@@ -120,6 +120,7 @@ a {
   height: 600px;
   background: #ccc;
   padding: 4px;
+  display: none;
 }
 .myfolder_folder .btn_bar p {
   margin-bottom: 5px;
