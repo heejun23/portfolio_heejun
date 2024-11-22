@@ -73,7 +73,6 @@ h2 {
   background: url(../images/bg_meet_basic.webp) no-repeat;
   background-size: cover;
   z-index: 10;
-  transition: 2s;
 }
 .wrap article .dialogue_img {
   position: absolute;
@@ -127,7 +126,7 @@ h2 {
   }
 }
 .wrap .txtend {
-  opacity: 0;
+  display: none;
 }
 
 .btn {
@@ -246,7 +245,7 @@ h2 {
   text-align: center;
   position: absolute;
   left: 50%;
-  top: -25%;
+  top: -30%;
   transform: translate(-50%, -50%);
   width: 85%;
 }
@@ -272,6 +271,9 @@ h2 {
 .credit p:nth-of-type(2) {
   gap: 14px;
 }
+.credit p:nth-of-type(3) {
+  gap: 14px;
+}
 .credit p:nth-of-type(4) {
   gap: 10px;
 }
@@ -286,6 +288,8 @@ h2 {
 }
 .credit .impression {
   font-size: 24px;
+  width: 61%;
+  margin: auto;
 }
 
 .credit_start {

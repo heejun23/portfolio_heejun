@@ -20,7 +20,6 @@
     background: url(../images/bg_meet_basic.webp) no-repeat;
       background-size: cover;
     z-index: 10;
-    transition: 2s;
     // display: none;
     .dialogue_img{
       position: absolute;
@@ -74,7 +73,7 @@
     }
   }
   .txtend {
-    opacity: 0;
+    display: none;
   }
 }
 .btn {
@@ -181,7 +180,7 @@
 .credit{
   text-align: center;
   position: absolute;
-  left: 50%; top: -25%;
+  left: 50%; top: -30%;
   transform: translate(-50%,-50%);
   width: 85%;
   p{
@@ -204,6 +203,9 @@
     &:nth-of-type(2){
       gap: 14px;
     }
+    &:nth-of-type(3){
+      gap: 14px;
+    }
     &:nth-of-type(4){
       gap: 10px;
     }
@@ -219,6 +221,7 @@
   }
   .impression{
     font-size: $font_size_24;
+    width: 61%; margin: auto;
   }
 }
 .credit_start{

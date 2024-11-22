@@ -43,7 +43,9 @@ $(document).ready(function () {
     } else {
       $('.dialogue').hide();
       $('.dialogue_img').hide();
-      $('article').addClass('txtend')
+      $('article').fadeOut(1500, function(){
+        $(this).addClass('txtend')
+      })
     }
   }
   // 대화창 표시
@@ -93,6 +95,8 @@ $(document).ready(function () {
       $('#li_bgm')[0].pause()
     }
   });
+
+  // article txtend있는지 체크함수
   function ckStart() {
     if ($('article').hasClass('txtend')) {
       animationStart()
@@ -100,17 +104,19 @@ $(document).ready(function () {
       setTimeout(ckStart, 100)
     }
   }
+  
   function animationStart() {
     $('.rocket').addClass('rocket_start')
     $('.credit').addClass('credit_start')
   }
+
   ckStart()
 
   // 별똥별
   animateStar('.star1', 4000, 1500); // 0초 초기 딜레이
   animateStar('.star2', 3000, 3000); // 3초 초기 딜레이
   animateStar('.star3', 4500, 5000); // 5초 초기 딜레이
-  animateStar('.star4', 2500, 5000); // 5초 초기 딜레이
-  animateStar('.star5', 2000, 5000); // 5초 초기 딜레이
+  animateStar('.star4', 2500, 5000); 
+  animateStar('.star5', 2000, 5000); 
 
 });
