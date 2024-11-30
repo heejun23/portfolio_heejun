@@ -50,6 +50,22 @@ h2 {
   text-shadow: 3px 3px #000;
 }
 
+@media (max-width: 1280px) and (min-width: 720px) {
+  .wrap {
+    width: 720px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 719px) {
+  .wrap {
+    width: 100vw;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}
 body {
   overflow: hidden;
 }
@@ -63,6 +79,9 @@ body {
   padding: 110px 0 90px;
   text-shadow: 3px 3px #000;
   animation: updown 0.5s step-end infinite;
+}
+.wrap #top_img {
+  display: none;
 }
 .wrap ul {
   margin: auto;
@@ -94,7 +113,7 @@ body {
   content: "";
   position: absolute;
   left: -70px;
-  top: 22px;
+  top: 18px;
   width: 64px;
   height: 64px;
   background: url("../images/select1.webp");
@@ -131,4 +150,81 @@ li a img {
 
 .end {
   z-index: 0 !important;
+}
+
+@media (max-width: 1280px) and (min-width: 720px) {
+  .wrap div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .wrap h2 {
+    padding: 0 0 10%;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .wrap ul {
+    width: 80%;
+  }
+  .wrap ul a {
+    font-size: 36px;
+    width: 450px;
+    height: 88px;
+    background: url(../images/mnu_m.webp) center no-repeat;
+  }
+  .wrap ul a:hover {
+    background: url(../images/mnu_m_hover.webp) center no-repeat;
+  }
+  .wrap ul a:before {
+    top: 14px;
+  }
+  .wrap ul a img {
+    width: 56px;
+    transform: translateY(16px);
+  }
+}
+@media (max-width: 719px) {
+  .wrap div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .wrap h2 {
+    padding: 0 0 10%;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 5.1vw;
+  }
+  .wrap h2 span {
+    font-size: 8vw;
+  }
+  .wrap ul {
+    width: 80%;
+  }
+  .wrap ul li {
+    margin-bottom: 14px;
+  }
+  .wrap ul a {
+    font-size: 1.4rem;
+    width: 100%;
+    height: 80px;
+    background-size: contain;
+    line-height: 3.3;
+  }
+  .wrap ul a:hover {
+    width: 100%;
+    height: 80px;
+    background-size: contain;
+  }
+  .wrap ul a:before {
+    width: 42px;
+    height: 42px;
+    left: -42px;
+  }
+  .wrap ul a img {
+    width: 36px;
+    transform: translateY(10px);
+  }
 }/*# sourceMappingURL=start_mnu.css.map */

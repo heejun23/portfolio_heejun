@@ -16,7 +16,7 @@
   <div class="wrap">
     <img src="./images/window98.webp" alt="윈도우98아이콘" class="bg">
     <!-- 바탕화면 아이콘 -->
-    <div class="icon_box">
+    <div class="icon_box Icon">
       <ul class="icon">
         <li><img src="./images/icon_computer.webp" alt="내 컴퓨터">내 컴퓨터</li>
         <li class="myfolder"><img src="./images/icon_folder.webp" alt="내 폴더">내 폴더</li>
@@ -46,6 +46,37 @@
         <li><img src="./images/icon_premiere_window.webp" alt="프리미어프로">Adobe<br>Premiere Pro</li>
       </ul>
     </div>
+
+        <!-- 모바일 바탕화면 아이콘 -->
+        <div class="m_icon_box Icon">
+          <ul>
+            <li><img src="./images/icon_computer.webp" alt="내 컴퓨터">내 컴퓨터</li>
+            <li class="myfolder"><img src="./images/icon_folder.webp" alt="내 폴더">내 폴더</li>
+            <li><img src="./images/icon_bin.webp" alt="휴지통">휴지통</li>
+            <li><img src="./images/icon_zip.webp" alt="반디집">반디집</li>
+            <li><img src="./images/icon_internet.webp" alt="인터넷 익스플로러">Internet Explorer</li>
+            <li><img src="./images/icon_chrome.webp" alt="크롬">Chrome</li>
+            <li><img src="./images/icon_opera.webp" alt="오페라">Opera</li>
+            <li><img src="./images/icon_notepad.webp" alt="메모장">메모장</li>
+            <li><img src="./images/icon_paint.webp" alt="그림판">그림판</li>
+            <li><img src="./images/icon_youtube.webp" alt="유튜브">YouTube</li>
+            <li><img src="./images/icon_kakao.webp" alt="카카오톡">카카오톡</li>
+            <li><img src="./images/icon_discord.webp" alt="디스코드">Discord</li>
+            <li><img src="./images/icon_steam.webp" alt="STEAM">STEAM</li>
+            <li><img src="./images/icon_vscode.webp" alt="vscode">Visual Studio Code</li>
+            <li><img src="./images/icon_xampp.webp" alt="xampp">xampp-control</li>
+            <li><img src="./images/icon_filezila_window.webp" alt="파일질라">FileZila<br>Client</li>
+            <li><img src="./images/icon_figma_window.webp" alt="피그마">Figma</li>
+            <li><img src="./images/icon_ps_window.webp" alt="포토샵">Adobe<br>PhotoShop</li>
+            <li><img src="./images/icon_illust_window.webp" alt="일러스트">Adobe Illustrator</li>
+            <li><img src="./images/icon_premiere_window.webp" alt="프리미어프로">Adobe<br>Premiere Pro</li>
+            <li class="mygame"><img src="./images/favicon_pixel2.webp" alt="포트폴리오 아이콘" />
+              HEEJUN
+              <p class="click_me">더블클릭<br>해보세요!</p>
+            </li>
+          </ul>
+        </div>
+
     <!-- 내폴더 -->
     <div class="myfolder_folder">
       <div class="btn_bar">
@@ -56,6 +87,7 @@
           <button class="folder_close">✕</button>
         </div>
       </div>
+      <div class="border">
       <div class="setting">
         <span>파일</span>
         <span>편집</span>
@@ -64,11 +96,38 @@
         <span>즐겨찾기</span>
         <span>도움말</span>
       </div>
-      <div>
-        
+      <div class="setting second">
+        <button>뒤로</button>
+        <button>앞으로</button>
+        <button>위로</button>
+        <button>잘라내기</button>
+        <button>복사</button>
+        <button>붙여넣기</button>
+        <button>실행취소</button>
+        <button>삭제</button>
       </div>
+      <div class="setting third">
+        <label for="address">주소</label>
+        <input type="text" value="내 폴더" readonly>
+        <button><img src="./images/select_small.webp" alt="화살표"></button>
+      </div>
+    </div>
       <div class="folder_screen">
-
+        <ul>
+          <li>
+            <img src="./images/icon_folder.webp" alt="폴더">
+            <p>icon</p>
+          </li>
+          <li>
+            <img src="./images/icon_folder.webp" alt="폴더">
+            <p>art</p>
+          </li>
+        </ul>
+      </div>
+      <div class="folder_bottom">
+        <span></span>
+        <span></span>
+        <span>내 폴더</span>
       </div>
     </div>
     <!-- 모달게임창 -->
@@ -80,6 +139,7 @@
             <div class="screen_down"></div>
             <div class="close">✕</div>
           </div>
+
         </div>
         <div class="screen">
           <p class="score">SCORE<br>000000</p>

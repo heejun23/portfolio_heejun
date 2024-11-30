@@ -50,6 +50,22 @@ h2 {
   text-shadow: 3px 3px #000;
 }
 
+@media (max-width: 1280px) and (min-width: 720px) {
+  .wrap {
+    width: 720px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 719px) {
+  .wrap {
+    width: 100vw;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}
 .wrap {
   background: url("../images/bg_archive.webp") no-repeat;
   min-height: 100vh;

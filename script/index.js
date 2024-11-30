@@ -14,15 +14,15 @@ $(document).ready(function () {
   clock()
 
   // 바탕화면 아이콘 클릭시
-  $(".icon_box li").click(function (e) {
-    $('.icon_box li').removeClass('click')
+  $(".Icon li").click(function (e) {
+    $('.Icon li').removeClass('click')
     $(this).addClass("click");
     e.stopPropagation();
   });
 
   // 배경 클릭시 선택효과 해제
   $(".wrap").click(function () {
-    $('.icon_box li').removeClass('click')
+    $('.Icon li').removeClass('click')
   });
 
   // 내폴더
@@ -30,7 +30,15 @@ $(document).ready(function () {
     $('.myfolder_folder').show()
     $('.myfolder').removeClass('click')
   })
-
+  // 내폴더 터치
+  $('.myfolder').on("touchend",function(){
+    $('.myfolder_folder').show()
+    $('.myfolder').removeClass('click')
+  })
+  // 내폴더 닫기
+  $('.folder_close').click(function(){
+    $('.myfolder_folder').hide()
+  })
 
   // 더블클릭시 게임창 나오기
   $(".mygame").dblclick(function () {
@@ -38,6 +46,16 @@ $(document).ready(function () {
     $('.mygame').removeClass('click')
     $('.click_me').css('animation-duration','0s')
     $('.mygame').css('animation-duration','0s')
+  });
+
+  // 터치로 게임창 나오기
+  $(".mygame").on("touchend", function (e) {
+    e.preventDefault(); // 기본 동작 방지
+    e.stopPropagation(); // 이벤트 전파 방지
+      $(".modal").show();
+      $('.mygame').removeClass('click')
+      $('.click_me').css('animation-duration','0s')
+      $('.mygame').css('animation-duration','0s')
   });
 
   // setTimeout 변수
@@ -52,7 +70,6 @@ $(document).ready(function () {
     $('#li_bgm')[0].currentTime = 0;
     $('#li_bgm')[0].play();
   }
-
 
   // 키보드 이벤트
   $(document).on('keydown.start', function () {
@@ -80,8 +97,6 @@ $(document).ready(function () {
 
       // 초기 키보드 이벤트 핸들러 제거
       $(document).off('keydown.start');
-
-
       // 목록 노출 후
       $(document).on('keydown.game', function (event) {
         if ($('.screen').is(':visible') && $('.screen ul').is(':visible')) { // .screen과 .screen ul이 보이는지 확인
@@ -123,6 +138,7 @@ $(document).ready(function () {
       })
     }
   }
+
 
   //마우스 이벤트
 

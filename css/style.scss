@@ -42,6 +42,13 @@ $font_size_22: 22px;
 $font_size_24: 24px;
 $font_size_36: 36px;
 $font_size_48: 48px;
+$font_m_06: 0.6rem;
+$font_m_08: 0.8rem;
+$font_m_09: 0.9rem;
+$font_m_1: 1rem;
+$font_m_12: 1.2rem;
+$font_m_14: 1.4rem;
+$font_m_2: 2rem;
 
 html{
   scroll-behavior: smooth;
@@ -81,5 +88,21 @@ h2{
   text-shadow: 3px 3px $dark_color1;
 }
 
+@media (max-width: 1280px) and (min-width: 720px){
+  .wrap{
+    width: 720px;
+  }
+  h2{
+    font-size: $font_size_36;
+  }
+}
 
+@media (max-width: 719px){
+  .wrap{
+    width: 100vw;
+  }
+  h2{
+    font-size: $font_m_12;
+  }
+}
 

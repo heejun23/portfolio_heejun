@@ -48,4 +48,21 @@ h2 {
   text-align: center;
   font-size: 48px;
   text-shadow: 3px 3px #000;
+}
+
+@media (max-width: 1280px) and (min-width: 720px) {
+  .wrap {
+    width: 720px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 719px) {
+  .wrap {
+    width: 100vw;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
